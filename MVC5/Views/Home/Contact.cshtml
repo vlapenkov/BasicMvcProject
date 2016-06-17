@@ -1,0 +1,69 @@
+﻿@using MVC5.Models;
+@{
+    ViewBag.Title = "Contact";
+    Site site =(Site)ViewData["Site"] ;
+   /* string siteName=String.Empty;
+    @if (site!=null)  {siteName=site.Name;} */
+}
+<h1>1</h1>
+<hr/>
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<address>
+    One Microsoft Way<br />
+    Redmond, WA 98052-6399<br />
+    <abbr title="Phone">P:</abbr>
+    425.555.0100
+</address>
+
+<address>
+    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
+    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+</address>
+
+<form class="form-horizontal" role="form">
+    <div class="form-group">
+        <label for="inputfield1" class="col-sm-2 control-label">Input 1</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputfield1" placeholder="Input 1">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputfield2" class="col-sm-2 control-label">Input 2</label>
+        <div class="col-sm-10 controls">
+            <div class="input-group">
+                <input type="text" class="form-control" id="inputfield2" placeholder="Input 2">
+                <span class="input-group-addon">.00</span>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputfield3" class="col-sm-2 control-label">Input 3</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputfield3" placeholder="Input 3">
+        </div>
+    </div>
+</form>
+<div class="demo-list clear">
+    <ul>
+        <li>
+            <input tabindex="1" type="checkbox" id="input-1">
+            <label for="input-1">Checkbox, <span>#input-1</span></label>
+        </li>
+        <li>
+            <input tabindex="2" type="checkbox" id="input-2" checked>
+            <label for="input-2">Checkbox, <span>#input-2</span></label>
+        </li>
+    </ul>
+    <ul>
+        <li>
+            <input tabindex="3" type="radio" id="input-3" name="demo-radio">
+            <label for="input-3">Radio button, <span>#input-3</span></label>
+        </li>
+        <li>
+            <input tabindex="4" type="radio" id="input-4" name="demo-radio" checked>
+            <label for="input-4">Radio button, <span>#input-4</span></label>
+        </li>
+    </ul>
+</div>

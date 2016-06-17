@@ -1,0 +1,37 @@
+﻿@model IEnumerable<MVC5.Models.Product>
+@{
+    ViewBag.Title = "Index";
+    string[] strs = { "nissan", "ford", "subaru" };
+}
+
+<h2>Index</h2>
+@ViewBag.str
+<hr />
+@foreach (var product in Model)
+{
+    <span>@product.Name</span>
+}
+<div class="form-horizontal">
+    <form method="get">
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <select multiple class="form-control" name="cars">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="opel">Opel</option>
+                <option value="audi">Audi</option>
+            </select>
+            
+            
+        </div>
+        <div class="col-md-12">
+            @Html.ListBoxFor(m => m.SelectedTags,
+         new MultiSelectList(strs)
+         , new { @class = "form-control", data_placeholder = "Tags..." })
+            </div>
+    </div>
+        <button class="btn btn-lg btn-primary" type="submit"><span class="glyphicon glyphicon-search"></span> Найти</button>
+        </form>
+</div>
+
+    

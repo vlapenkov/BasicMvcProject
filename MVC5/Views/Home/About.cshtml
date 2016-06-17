@@ -1,0 +1,87 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Use this area to provide additional information.</p>
+<div class="row">
+<div class="col-xs-12">
+    <div class="input-group">
+        
+        <input type="text" class="form-control" aria-label="...">
+        <span class="input-group-addon">
+            <input type="checkbox" aria-label="...">
+        </span>
+    </div><!-- /input-group -->
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search for...">
+        <span class="input-group-btn">
+            <button class="btn btn-default" type="button">Go!</button>
+        </span>
+    </div>
+    </div>
+    </div>
+    <form class="bs-component">
+        <div class="input-group">
+           
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="button">Go!</button>
+            </span>
+            <input type="text" class="form-control" placeholder="Search for...">
+        </div>
+        <div class="input-group"> <div class="input-group-btn"> <button type="button" class="btn btn-default" aria-label="Bold"><span class="glyphicon glyphicon-bold"></span></button> <button type="button" class="btn btn-default" aria-label="Italic"><span class="glyphicon glyphicon-italic"></span></button> </div> <input type="text" class="form-control" aria-label="Text input with multiple buttons"><div class="input-group-btn"> <button type="button" class="btn btn-default" aria-label="Bold"><span class="glyphicon glyphicon-bold"></span></button> <button type="button" class="btn btn-default" aria-label="Italic"><span class="glyphicon glyphicon-italic"></span></button> </div> </div>
+
+        <div class="form-group">
+            <label class="control-label" for="focusedInput">Focused input</label>
+            <input class="form-control" id="focusedInput" type="text" value="This is focused...">
+        </div>
+
+        <div class="form-group">
+            <label class="control-label" for="disabledInput">Disabled input</label>
+            <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled="">
+        </div>
+
+        <div class="form-group has-warning">
+            <label class="control-label" for="inputWarning">Input warning</label>
+            <input type="text" class="form-control" id="inputWarning">
+        </div>
+
+        <div class="form-group has-error">
+            <label class="control-label" for="inputError">Input error</label>
+            <input type="text" class="form-control" id="inputError">
+        </div>
+
+        <div class="form-group has-success">
+            <label class="control-label" for="inputSuccess">Input success</label>
+            <input type="text" class="form-control" id="inputSuccess">
+        </div>
+
+        <div class="form-group">
+            <label class="control-label" for="inputLarge">Large input</label>
+            <input class="form-control input-lg" type="text" id="inputLarge">
+        </div>
+
+        <div class="form-group">
+            <label class="control-label" for="inputDefault">Default input</label>
+            <input type="text" class="form-control" id="inputDefault">
+        </div>
+
+        <div class="form-group">
+            <label class="control-label" for="inputSmall">Small input</label>
+            <input class="form-control input-sm" type="text" id="inputSmall">
+        </div>
+
+        <div class="form-group">
+            <label class="control-label">Input addons</label>
+            <div class="input-group">
+                <span class="input-group-addon">$</span>
+                <input type="text" class="form-control">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">Button</button>
+                </span>
+            </div>
+        </div>
+        <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div>
+
+    </form>

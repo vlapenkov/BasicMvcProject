@@ -1,0 +1,73 @@
+﻿@model MVC5.Models.Product
+
+@{
+    ViewBag.Title = "Edit";
+  ViewBag.MetaDescription = Model.Name;
+    ViewBag.MetaKeyWords = String.Format("Buy {0} in shop",@Model.Name);
+}
+
+<h2>Edit</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Product</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Name, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Name)
+                @Html.ValidationMessageFor(model => model.Name)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ReleaseDate, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @*Html.EditorFor(model => model.ReleaseDate)
+                @Html.ValidationMessageFor(model => model.ReleaseDate) *@
+                <input name="ReleaseDate" id="ReleaseDate" type="text" value="@Model.ReleaseDate.ToShortDateString()">
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Price, new {@class = "control-label col-md-2"})
+            <div class="col-md-10">
+                <input type="text" name="Price" id="Price" value="@Model.Price" />
+                @*Html.EditorFor(model => model.Price) *@
+                @Html.ValidationMessageFor(model => model.Price)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-12">
+                @Model.ProducerId
+                @*Html.DropDownList("ProducerId", String.Empty)*@
+                @*Html.DropDownListFor(p => p.ProducerId,new SelectList(Model.Producers, "Id", "Name")) *@
+                @Html.DropDownListFor(model => model.ProducerId, new SelectList(ViewBag.Producers, "Id", "Name"))
+                @*Html.DropDownListFor(p => p.ProducerId, (SelectList)ViewBag.SL)*@
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Save" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }

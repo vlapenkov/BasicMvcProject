@@ -1,0 +1,90 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+ /*   max-width: 280px; */
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+.header_info {
+    content:'';
+    background: rgba(0, 0, 0, 0) url("/content/img/header-bg.gif") no-repeat scroll left top;
+
+
+}
+
+
+[class^="header_inner"] {
+    margin-top:10px;
+    margin-bottom:10px;
+    height:50px; 
+    width:100%;
+}
+.header_inner_logo {
+    background:url("/content/img/logo.png") no-repeat scroll left center;
+}
+
+.header_inner_contacts {
+    background:#0f0;
+    
+}
+.contact_info {
+    padding:0;
+    margin:0;
+    text-align:center;
+    line-height:25px;
+
+}
+
+.header_inner_buttons {
+    background:#00f;
+    line-height:50px;
+    text-align:center;
+    
+}
+
+body {
+    padding-top:0px;
+}
+
+.col {
+    padding:0 15px;
+}
+
+ul {
+     list-style-type: none;
+}

@@ -1,0 +1,8 @@
+﻿@model MVC5.Models.Product
+@{
+    ViewBag.Title = "Select";
+}
+
+<h2>Select</h2>
+@Html.DropDownListFor(p => p.ProducerId, new SelectList(ViewBag.Producers, "Id", "Name"))
+
