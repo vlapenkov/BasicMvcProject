@@ -10,6 +10,7 @@ namespace MVC5.Controllers
 {
     public class FakeController : Controller
     {
+        // something like fake
         ICacheService _cache;
        
        public FakeController(ICacheService cache)
