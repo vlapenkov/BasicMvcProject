@@ -26,8 +26,8 @@ namespace MVC5.Filters
 
         public void OnActionExecuted(ActionExecutedContext filterContext)
         {
-            var partner=_dbContext.Partners.First();
-            Debug.WriteLine(partner.Culture); 
+            var partner=_dbContext.Partners.FirstOrDefault();
+            Debug.WriteLine(partner); 
         //    throw new NotImplementedException();
         }
 

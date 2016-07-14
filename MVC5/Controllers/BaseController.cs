@@ -23,7 +23,12 @@ namespace MVC5.Controllers
        
             ISiteProvider _siteProvider;
         } */
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="dbContext"></param>
+        /// <param name="partnerService"></param>
+        /// <param name="siteProvider"></param>
         public BaseController(IDbContext dbContext, IPartnerService partnerService,ISiteProvider siteProvider)
         {
             _partnerService = partnerService;
@@ -43,7 +48,7 @@ namespace MVC5.Controllers
             var cultureInfo = new CultureInfo(culture);
             Thread.CurrentThread.CurrentCulture = cultureInfo;
             Thread.CurrentThread.CurrentUICulture = cultureInfo;
-            var product = _dbContext.Products.First();
+            var product = _dbContext.Products.FirstOrDefault();
             Debug.WriteLine(product);
             base.Initialize(requestContext);
         }

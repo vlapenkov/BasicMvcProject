@@ -24,6 +24,7 @@ namespace MVC5.Services
 
         public void Initialise(string host)
         {
+            //return new Site();
             _site = _db.Sites.SingleOrDefault(s => s.Name == host);
         }
 
